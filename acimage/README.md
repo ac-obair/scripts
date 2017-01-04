@@ -19,3 +19,11 @@ FFFFFFF
 #### expected output:
 Two files will be output a reg.json file for further Python manupulation if you require and a plain text list 
 of all the paths to the images for the model provided registrations.
+
+Assuming you have enough space on the partition and have checked the total size of the images you're about to move you can extract them with
+```
+read -pr "enter car model: " model
+mkdir ${model}_images/ && {
+    for each in $(cat reg.txt); do cp -R $each ${model}_images/; done
+}
+```
