@@ -8,7 +8,6 @@ Bash can then be used with the output to extract the files from the root images 
 
 
 csv must be in the format of
-
 ```
 XXXXXXX
 AAAAAAA
@@ -16,3 +15,7 @@ SSSSSSS
 DDDDDDD
 FFFFFFF
 ```
+
+#### expected output:
+Two files will be output a reg.json file for further Python manupulation if you require and a plain text list 
+of all the paths to the images for the model provided registrations.
