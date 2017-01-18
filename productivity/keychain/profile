@@ -1,0 +1,10 @@
+# Used with keychain expect file in ~/Devops/utils/scripts/pull_key_password.exp
+export KEY_PASSWORD=<password>
+
+# KEYCHAIN CONFIG
+eval `keychain --eval --agents ssh --inherit any id_rsa`
+
+# automated expect script
+~/Devops/utils/scripts/pull_key_passwords.exp
+
+. ~/.keychain/<hostname>-sh
