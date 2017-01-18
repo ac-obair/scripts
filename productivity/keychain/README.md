@@ -13,7 +13,7 @@ This repo provides a way to completely automate loading keychain managed ssh key
 
 #### How it works
 
-The manual way to load keys via `keychain` into memorty is by statements into your `~/.bash_profile` or `~/.zshrc` file depending on your shell. *Note* also that keychain requires additional files to be sourced to function properly and those **are** included in the provide file ``. 
+The manual way to load keys via `keychain` into memorty is by statements into your `~/.bash_profile` or `~/.zshrc` file depending on your shell. *Note* also that keychain requires additional files to be sourced to function properly and those **are** included in the provide file `profile`. 
 
 ```
 keychain ~/.ssh/<key_one_rsa>
@@ -71,3 +71,12 @@ foreach rsa { "key_one_rsa"
   expect "Enter " { send "$password\r" }
 }
 ```
+
+#### Installation
+
+1. Simple copy the contents of `profile` to your `~/.bash_profile` or `~/.zshrc` depending on which you use and fill in the place holder values. 
+2. Ensure that the `KEY_PASSWORD` environment var is set and that the `pull_key_passowrds.exp` file is being run 
+
+### TODO
+
+* add installation script
