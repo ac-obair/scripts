@@ -1,0 +1,15 @@
+#!/usr/bin/expect
+
+# This was tested on a single file before being ran against a repo
+
+set timeout 10
+
+set old_vault_password "$env(OLD_PASSWORD)"
+set new_vault_password "$env(VAULT_PASSWORD)"
+
+set file [lindex $argv 0 ]
+
+spawn ansible-vault rekey $file
+expect "Vault password:" { send "$old_vault_password\r" } 
+expect "New Vault " { send "$new_vault_password\r" } 
+expect "Confirm New Vault " { send "$new_vault_password\r" } 
