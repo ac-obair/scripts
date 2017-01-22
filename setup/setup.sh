@@ -49,6 +49,7 @@ brew install findutils --with-default-names
 brew install gnu-which --with-default-names
 brew install gnu-sed --with-default-names
 brew install gnu-tar --with-default-names
+brew install pidof
 
 # install vagrant
 brew cask install virtualbox
